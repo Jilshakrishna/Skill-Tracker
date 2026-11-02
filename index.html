@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SkillBloom — Grow your skills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--bg:#f7f4fa;--panel:#fff;--text:#292536;--muted:#888397;--line:#ece7f1;--accent:#9275bd;--accent2:#eee7f7;--nav:#30243f;--shadow:0 12px 34px rgba(55,39,75,.07);--purple:#a78bcb;--orange:#d9a77d}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;transition:.25s}body.dark{--bg:#191522;--panel:#241e30;--text:#f5effb;--muted:#b5aabd;--line:#3b3048;--accent:#c2a6e8;--accent2:#392d49;--nav:#17111f;--shadow:0 12px 34px rgba(0,0,0,.2)}
 button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{display:flex;min-height:100vh}.sidebar{width:248px;background:var(--nav);color:#eaf4f2;padding:28px 18px;display:flex;flex-direction:column;position:fixed;inset:0 auto 0 0;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:0 10px 35px}.brandmark{width:39px;height:39px;border-radius:13px;background:#9275bd;display:grid;place-items:center;font-size:20px}.brand strong{font:800 20px Manrope}.brand small{display:block;color:#9bb3b5;font-size:10px;letter-spacing:1.5px;margin-top:2px}.nav-label{font-size:10px;letter-spacing:1.6px;color:#82999e;padding:0 12px;margin:10px 0}.nav button{display:flex;align-items:center;gap:13px;width:100%;padding:12px 13px;margin:4px 0;border-radius:10px;background:transparent;color:#b9c9ca;text-align:left;font-size:13px;transition:.2s}.nav button:hover,.nav button.active{background:#24434a;color:#fff}.nav button.active{box-shadow:inset 3px 0 #c2a6e8}.nav .ico{width:19px;text-align:center;font-size:16px}.side-bottom{margin-top:auto;border-top:1px solid #29414a;padding:18px 8px 0;color:#8fa5a8;font-size:11px;line-height:1.7}.main{margin-left:248px;width:calc(100% - 248px);padding:28px 38px 50px;max-width:1600px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase}.topbar h1{font:800 25px Manrope;margin:5px 0 0}.top-actions{display:flex;align-items:center;gap:10px}.icon-btn{width:40px;height:40px;border-radius:12px;background:var(--panel);border:1px solid var(--line);color:var(--text);font-size:16px}.avatar{width:39px;height:39px;border-radius:50%;background:#eee5f8;color:#634b83;display:grid;place-items:center;font-weight:700;font-size:13px}.page{display:none}.page.active{display:block}.welcome{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(110deg,#49365f,#8064a7);color:white;padding:27px 30px;border-radius:18px;margin-bottom:22px;overflow:hidden;position:relative}.welcome:after{content:"✳";position:absolute;font-size:170px;right:8%;top:-62px;color:#ffffff12}.welcome h2{font:800 22px Manrope;margin:0 0 7px}.welcome p{margin:0;color:#c4dcda;font-size:13px}.date-chip{position:relative;z-index:1;border:1px solid #ffffff38;border-radius:10px;padding:10px 13px;font-size:12px;color:#e1f4ef}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:22px}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:18px 19px}.stat-head{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.stat-icon{width:31px;height:31px;border-radius:10px;background:var(--accent2);display:grid;place-items:center;color:var(--accent)}.stat strong{display:block;font:800 26px Manrope;margin:13px 0 3px}.stat small{font-size:11px;color:var(--muted)}.content-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;margin-bottom:18px}.card{padding:21px}.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.card h3{font:700 15px Manrope;margin:0}.sub{font-size:11px;color:var(--muted);margin-top:4px}.link-btn{background:none;color:var(--accent);font-weight:700;font-size:11px}.skill-row{display:flex;align-items:center;gap:12px;margin:16px 0}.skill-emoji{width:37px;height:37px;border-radius:11px;background:var(--accent2);display:grid;place-items:center;font-size:17px}.skill-info{flex:1;min-width:0}.skill-info strong{font-size:12px}.skill-info small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.percent{font-size:11px;font-weight:700}.track{height:6px;background:var(--line);border-radius:20px;overflow:hidden;margin-top:8px}.fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#9275bd,#c8b2e8)}.goal-item{padding:13px 0;border-bottom:1px solid var(--line)}.goal-item:last-child{border:0}.goal-top{display:flex;justify-content:space-between;font-size:12px;font-weight:600}.goal-item small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.goal-progress{display:flex;align-items:center;gap:10px}.goal-progress .track{flex:1}.goal-progress span{font-size:10px;color:var(--muted)}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.activity{display:flex;gap:11px;padding:10px 0;border-bottom:1px solid var(--line);font-size:11px}.activity:last-child{border:0}.activity-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:4px;flex:none}.activity small{display:block;color:var(--muted);margin-top:4px}.chart-wrap{height:160px;display:flex;align-items:end;gap:12px;padding:10px 5px 0}.bar-col{height:100%;flex:1;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:8px}.bar{width:min(28px,70%);border-radius:7px 7px 2px 2px;background:linear-gradient(180deg,#c7afe8,#9275bd);min-height:4px}.bar-col small{font-size:9px;color:var(--muted)}.section-title{display:flex;justify-content:space-between;align-items:center;margin:5px 0 18px}.section-title h2{font:800 21px Manrope;margin:0}.section-title p{font-size:12px;color:var(--muted);margin:5px 0}.primary{background:var(--accent);color:white;padding:11px 16px;border-radius:10px;font-weight:700;font-size:12px}.primary:hover{filter:brightness(1.06)}.secondary{background:var(--accent2);color:var(--accent);padding:10px 14px;border-radius:10px;font-weight:700;font-size:11px}.toolbar{display:flex;gap:9px;margin-bottom:16px;flex-wrap:wrap}.field{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 12px;font-size:12px;outline:none}.field:focus{border-color:var(--accent)}.toolbar input{min-width:210px;flex:1}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill-card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:var(--shadow)}.skill-card-top{display:flex;justify-content:space-between;align-items:center}.skill-card h3{font:700 14px Manrope;margin:12px 0 4px}.skill-card p{font-size:10px;color:var(--muted);margin:0}.skill-meta{display:flex;justify-content:space-between;margin-top:15px;font-size:10px;color:var(--muted)}.skill-actions{display:flex;gap:7px}.tiny{background:var(--bg);color:var(--muted);border:1px solid var(--line);padding:5px 8px;border-radius:7px;font-size:10px}.badge{background:var(--accent2);color:var(--accent);padding:5px 8px;border-radius:20px;font-size:9px;font-weight:700}.goal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.goal-card{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:15px}.goal-card h3{font:700 14px Manrope;margin:12px 0 5px}.goal-card p{font-size:11px;color:var(--muted)}.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.road-card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:19px}.road-card h3{font:700 14px Manrope}.road-card p{font-size:11px;color:var(--muted);line-height:1.6}.road-card ul{padding-left:17px;font-size:11px;line-height:2;color:var(--muted)}.modal-backdrop{display:none;position:fixed;inset:0;background:#09151bb8;z-index:20;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(460px,100%);background:var(--panel);border-radius:18px;padding:24px;box-shadow:0 25px 80px #0004}.modal h2{font:800 18px Manrope;margin:0 0 18px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}.form-group.full{grid-column:1/-1}.form-group label{font-size:10px;color:var(--muted);font-weight:700}.form-group input,.form-group select,.form-group textarea{width:100%}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}.empty{text-align:center;padding:35px;color:var(--muted);font-size:12px}.toast{position:fixed;bottom:22px;right:22px;background:#49365f;color:white;padding:12px 17px;border-radius:10px;font-size:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.25s;z-index:30}.toast.show{opacity:1;transform:translateY(0)}.mobile-menu{display:none}
@@ -21,6 +23,20 @@ button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{di
 
 @media(max-width:1050px){.main{padding:25px}.skills-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.sidebar{width:72px;padding:22px 9px}.brand{padding:0 7px 30px}.brand strong,.brand small,.nav-label,.nav button span:not(.ico),.side-bottom{display:none}.brandmark{width:43px;height:43px}.nav button{justify-content:center;padding:13px 5px}.nav .ico{font-size:19px}.main{margin-left:72px;width:calc(100% - 72px);padding:20px 14px}.topbar h1{font-size:20px}.topbar .eyebrow{font-size:9px}.welcome{padding:22px}.welcome h2{font-size:18px}.date-chip{display:none}.content-grid,.bottom-grid{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}.goal-grid{grid-template-columns:1fr}.stats{gap:9px}.stat{padding:14px}.stat strong{font-size:22px}.card{padding:16px}.section-title h2{font-size:18px}.section-title{align-items:flex-start;gap:10px}.primary{padding:10px 12px}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}}
+
+/* Skill quiz */
+.quiz-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.quiz-skill{display:flex;align-items:center;gap:12px;text-align:left;padding:14px;border-radius:14px;background:var(--bg);border:1px solid var(--line);color:var(--text);transition:.2s}
+.quiz-skill:hover{border-color:var(--accent);transform:translateY(-2px)}
+.quiz-skill strong{font-size:13px;display:block}
+.quiz-skill small{font-size:10px;color:var(--muted)}
+.quiz-opt{display:block;width:100%;text-align:left;padding:13px 15px;margin:8px 0;border-radius:11px;background:var(--panel);border:1px solid var(--line);color:var(--text);font-size:13px;transition:.2s}
+.quiz-opt:hover:not(:disabled){border-color:var(--accent);background:var(--accent2)}
+.quiz-opt:disabled{cursor:default;color:var(--text)}
+.quiz-opt.correct{background:#e3f6ea;border-color:#58b37a;color:#1d5c36}
+.quiz-opt.wrong{background:#fde8e8;border-color:#d96b6b;color:#7a2222}
+.quiz-result{text-align:center;padding:40px 20px}
+.quiz-result h2{font:800 24px Manrope;margin:0 0 10px}
 </style>
 </head>
 <body>
@@ -50,6 +66,7 @@ button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{di
     <button data-page="daily"><span class="ico">✦</span><span>Daily Tracker</span></button>
     <button data-page="roadmap"><span class="ico">⌁</span><span>Career Roadmap</span></button>
     <button data-page="analytics"><span class="ico">▥</span><span>Analytics</span></button>
+    <button data-page="quiz"><span class="ico">✎</span><span>Skill Quiz</span></button>
   </nav>
   <div class="nav-label" style="margin-top:28px">PREFERENCES</div>
   <nav class="nav"><button id="themeToggle"><span class="ico">☼</span><span>Toggle appearance</span></button><button id="exportBtn"><span class="ico">⇩</span><span>Export my data</span></button></nav>
@@ -133,6 +150,10 @@ button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{di
   <div class="stats"><div class="stat"><div class="stat-head">Average progress</div><strong id="anaAvg">0%</strong><small>Across your skills</small></div><div class="stat"><div class="stat-head">Total skills</div><strong id="anaTotal">0</strong><small>Skills you're developing</small></div><div class="stat"><div class="stat-head">Advanced skills</div><strong id="anaAdvanced">0</strong><small>Level: Advanced</small></div><div class="stat"><div class="stat-head">Completed goals</div><strong id="anaGoals">0</strong><small>Milestones achieved</small></div></div>
   <div class="content-grid"><div class="card"><div class="card-head"><h3>Progress by skill</h3></div><div id="analyticsSkills"></div></div><div class="card"><div class="card-head"><h3>Category breakdown</h3></div><div id="categoryBreakdown"></div></div></div>
 </section>
+<section class="page" id="quiz">
+  <div class="section-title"><div><h2>Skill assessment quiz</h2><p>Test what you know and see where you stand.</p></div></div>
+  <div id="quizBox"></div>
+</section>
 </main>
 </div>
 <div class="modal-backdrop" id="skillModal"><div class="modal"><h2 id="skillModalTitle">Add a skill</h2><form id="skillForm"><input type="hidden" id="skillId"><div class="form-grid">
@@ -148,6 +169,99 @@ button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{di
 
 <div class="toast" id="toast"></div>
 <script>
+const quizBank={
+'Python':[
+{q:'What does len([1, 2, 3]) return?',o:['2','3','4','Error'],a:1},
+{q:'Which keyword defines a function in Python?',o:['function','func','def','define'],a:2},
+{q:'What is the type of 3.0 in Python?',o:['int','float','str','double'],a:1}],
+'C Programming':[
+{q:'Which header file is needed for printf()?',o:['<stdlib.h>','<stdio.h>','<string.h>','<math.h>'],a:1},
+{q:'What does "int *p;" declare?',o:['An integer','A pointer to an integer','An array','A function'],a:1},
+{q:'In C, array indexing starts at…',o:['0','1','-1','It depends'],a:0}],
+'HTML & CSS':[
+{q:'Which tag creates the largest heading?',o:['<h6>','<head>','<h1>','<header>'],a:2},
+{q:'Which CSS property changes text colour?',o:['font-color','color','text-style','fg'],a:1},
+{q:'Which display value creates a flexible layout?',o:['block','inline','flex','none'],a:2}],
+'Git & GitHub':[
+{q:'Which command saves staged changes?',o:['git push','git commit','git add','git pull'],a:1},
+{q:'Which command creates a new branch?',o:['git branch name','git new name','git fork name','git split name'],a:0},
+{q:'What does git clone do?',o:['Deletes a repo','Copies a remote repo locally','Merges branches','Creates a commit'],a:1}],
+'Communication':[
+{q:'Active listening mainly means…',o:['Planning your reply while they talk','Giving full attention and checking you understood','Interrupting to save time','Checking your phone'],a:1},
+{q:'Good feedback should be…',o:['Specific and respectful','Vague','Always public','Only negative'],a:0},
+{q:'Which body language shows interest?',o:['Crossed arms','Eye contact and nodding','Looking away','Yawning'],a:1}],
+'Problem Solving':[
+{q:'What should you do first?',o:['Write code immediately','Understand the problem clearly','Guess','Ask someone to do it'],a:1},
+{q:'Splitting a big problem into smaller parts is called…',o:['Decomposition','Compilation','Duplication','Encryption'],a:0},
+{q:'Your first solution fails. Best next step?',o:['Give up','Review assumptions and try another approach','Repeat the same thing','Blame the tools'],a:1}]
+};
+let quizResults=JSON.parse(localStorage.getItem('skillbloom_quiz')||'null')||[];
+let quizState=null;
+const saveQuiz=()=>localStorage.setItem('skillbloom_quiz',JSON.stringify(quizResults));
+
+function quizStart(id){
+  const sk=skills.find(x=>x.id===id);
+  if(!sk||!quizBank[sk.name])return;
+  quizState={id,skill:sk.name,list:quizBank[sk.name].slice().sort(()=>Math.random()-.5),i:0,score:0,picked:null};
+  renderQuiz();
+}
+function quizPick(n){
+  const s=quizState;
+  if(!s||s.picked!==null)return;
+  s.picked=n;
+  if(n===s.list[s.i].a)s.score++;
+  renderQuiz();
+}
+function quizNext(){
+  const s=quizState;
+  s.i++;s.picked=null;
+  if(s.i>=s.list.length)return quizFinish();
+  renderQuiz();
+}
+function quizFinish(){
+  const s=quizState,pct=Math.round(s.score/s.list.length*100);
+  quizResults.unshift({skill:s.skill,score:s.score,total:s.list.length,pct,date:todayKey()});
+  quizResults=quizResults.slice(0,20);
+  saveQuiz();
+  logActivity(`Quiz: ${s.skill} — ${s.score}/${s.list.length}`);
+  quizState={...s,done:true,pct};
+  renderQuiz();
+}
+function quizApply(){
+  const s=quizState,sk=skills.find(x=>x.id===s.id);
+  if(!sk)return;
+  sk.progress=Math.round((Number(sk.progress)+s.pct)/2);
+  sk.level=sk.progress>=80?'Advanced':sk.progress>=50?'Intermediate':'Beginner';
+  logActivity(`Updated ${sk.name} from quiz (${sk.progress}%)`);
+  save();quizState=null;renderAll();
+  toast('Skill progress updated from your quiz');
+}
+function quizExit(){quizState=null;renderQuiz()}
+
+function renderQuiz(){
+  const box=$('quizBox');
+  if(!box)return;
+  const s=quizState;
+  if(s&&s.done){
+    box.innerHTML=`<div class="card quiz-result"><h2>${s.pct>=80?'🌸 Excellent!':s.pct>=50?'🌱 Good progress':'💪 Keep practising'}</h2><p>${esc(s.skill)}: <strong>${s.score}/${s.list.length}</strong> (${s.pct}%)</p><div class="modal-actions" style="justify-content:center"><button class="secondary" onclick="quizApply()">Update my skill progress</button><button class="primary" onclick="quizExit()">Back to quizzes</button></div></div>`;
+    return;
+  }
+  if(s){
+    const q=s.list[s.i];
+    const opts=q.o.map((t,n)=>{
+      let c='quiz-opt';
+      if(s.picked!==null){if(n===q.a)c+=' correct';else if(n===s.picked)c+=' wrong'}
+      return `<button class="${c}" ${s.picked!==null?'disabled':''} onclick="quizPick(${n})">${esc(t)}</button>`;
+    }).join('');
+    const next=s.picked!==null?`<div class="modal-actions"><button class="primary" onclick="quizNext()">${s.i+1===s.list.length?'See result':'Next →'}</button></div>`:'';
+    box.innerHTML=`<div class="card"><div class="card-head"><div><h3>${esc(s.skill)}</h3><div class="sub">Question ${s.i+1} of ${s.list.length}</div></div><button class="link-btn" onclick="quizExit()">Quit</button></div><div class="track"><div class="fill" style="width:${s.i/s.list.length*100}%"></div></div><h3 style="margin:20px 0 14px">${esc(q.q)}</h3>${opts}${next}</div>`;
+    return;
+  }
+  const picks=skills.filter(k=>quizBank[k.name]).map(k=>`<button class="quiz-skill" onclick="quizStart(${k.id})"><span class="skill-emoji">${esc(k.icon)}</span><span><strong>${esc(k.name)}</strong><small>${esc(k.level)} · ${k.progress}%</small></span></button>`).join('');
+  const hist=quizResults.slice(0,6).map(r=>`<div class="activity-entry"><div><strong>${esc(r.skill)}</strong><small>${esc(r.date)}</small></div><span class="minutes">${r.score}/${r.total} · ${r.pct}%</span></div>`).join('');
+  box.innerHTML=`<div class="card"><div class="card-head"><div><h3>Choose a skill to test</h3><div class="sub">3 questions per skill</div></div></div><div class="quiz-pick">${picks||'<div class="empty">No quizzes available for your skills yet.</div>'}</div></div><div class="card" style="margin-top:18px"><div class="card-head"><h3>Recent results</h3></div>${hist||'<div class="empty">No quizzes taken yet. Pick a skill above 🌱</div>'}</div>`;
+}
+
 const starterSkills=[
 {id:1,name:'Python',category:'Programming',level:'Intermediate',progress:60,icon:'🐍'},
 {id:2,name:'C Programming',category:'Programming',level:'Advanced',progress:80,icon:'⚙️'},
@@ -174,7 +288,7 @@ const $=id=>document.getElementById(id);
 function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2300)}
 function logActivity(text){activities.unshift({text,time:'Just now'});activities=activities.slice(0,6);save()}
 function average(){return skills.length?Math.round(skills.reduce((a,s)=>a+Number(s.progress),0)/skills.length):0}
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));const names={dashboard:'Your growth space',skills:'Your skill library',goals:'Goals that move you forward',todo:'Plan your day',daily:'Your daily progress',roadmap:'Plan your next chapter',analytics:'Progress at a glance'};$('pageHeading').textContent=names[id];renderAll()}
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));const names={dashboard:'Your growth space',skills:'Your skill library',goals:'Goals that move you forward',todo:'Plan your day',daily:'Your daily progress',roadmap:'Plan your next chapter',analytics:'Progress at a glance',quiz:'Test your knowledge'};$('pageHeading').textContent=names[id];renderAll()}
 document.querySelectorAll('.nav button[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.goto)));
 function renderDashboard(){
@@ -223,7 +337,7 @@ $('todoForm').onsubmit=e=>{e.preventDefault();let id=$('todoId').value,obj={id:i
 $('activityDate').value=todayKey();
 $('activityForm').onsubmit=e=>{e.preventDefault();dailyLogs.unshift({id:Date.now(),name:$('activityName').value.trim(),category:$('activityCategory').value,duration:Number($('activityDuration').value),date:$('activityDate').value,note:$('activityNote').value.trim()});logActivity('Logged learning activity: '+$('activityName').value.trim());save();$('activityForm').reset();$('activityDate').value=todayKey();$('activityDuration').value=30;renderAll();toast('Daily activity saved ✨')};
 
-function renderAll(){renderDashboard();renderSkills();renderGoals();renderAnalytics();renderTodos();renderDaily()}
+function renderAll(){renderDashboard();renderSkills();renderGoals();renderAnalytics();renderTodos();renderDaily();renderQuiz()}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function openModal(id){$(id).classList.add('show')}function closeModal(id){$(id).classList.remove('show')}
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));
@@ -238,14 +352,14 @@ $('goalForm').onsubmit=e=>{e.preventDefault();let id=$('goalId').value;let obj={
 function deleteGoal(id){let g=goals.find(x=>x.id===id);if(confirm(`Delete goal "${g.name}"?`)){goals=goals.filter(x=>x.id!==id);save();renderAll();toast('Goal deleted')}}
 function bumpGoal(id){let g=goals.find(x=>x.id===id);g.progress=Math.min(100,g.progress+10);logActivity('Progress updated: '+g.name+' ('+g.progress+'%)');save();renderAll();toast(g.progress===100?'Goal completed! Amazing work 🎉':'Progress updated')}
 function addRoadmapGoal(name){goals.push({id:Date.now(),name,date:'',progress:0,note:'Added from your career roadmap.'});logActivity('Added roadmap goal: '+name);save();renderAll();toast('Added to your learning goals')}
-function exportData(){let data={skills,goals,activities,todos,dailyLogs,exportedAt:new Date().toISOString()};let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='skillbloom-backup.json';a.click();URL.revokeObjectURL(a.href);toast('Your data export is ready')}
+function exportData(){let data={skills,goals,activities,todos,dailyLogs,quizResults,exportedAt:new Date().toISOString()};let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='skillbloom-backup.json';a.click();URL.revokeObjectURL(a.href);toast('Your data export is ready')}
 $('exportBtn').onclick=exportData;$('analyticsExport').onclick=exportData;
 function toggleTheme(){document.body.classList.toggle('dark');localStorage.setItem('skillbloom_dark',document.body.classList.contains('dark')?'1':'0')}
 $('themeToggle').onclick=toggleTheme;$('topTheme').onclick=toggleTheme;if(localStorage.getItem('skillbloom_dark')==='1')document.body.classList.add('dark');
 $('todayDate').textContent='✦ '+new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}).toUpperCase();
 // Demo sign-in: saves only a display name and email locally; it is not secure authentication.
 const savedProfile=JSON.parse(localStorage.getItem('skillbloom_profile')||'null');
-function enterWorkspace(profile){localStorage.setItem('skillbloom_profile',JSON.stringify(profile));$('loginScreen').classList.remove('show');$('userAvatar').textContent=(profile.name||'S').trim().split(/\\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase();document.querySelector('.welcome h2').textContent='Let your skills bloom, '+profile.name.split(' ')[0]+' ✨';}
+function enterWorkspace(profile){localStorage.setItem('skillbloom_profile',JSON.stringify(profile));$('loginScreen').classList.remove('show');$('userAvatar').textContent=(profile.name||'S').trim().split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase();document.querySelector('.welcome h2').textContent='Let your skills bloom, '+profile.name.split(' ')[0]+' ✨';}
 if(savedProfile){enterWorkspace(savedProfile)}else{$('loginScreen').classList.add('show')}
 $('loginForm').onsubmit=e=>{e.preventDefault();const profile={name:$('loginName').value.trim(),email:$('loginEmail').value.trim()};if(!profile.name||!profile.email)return;enterWorkspace(profile);toast('Welcome to SkillBloom ✨')};
 $('logoutBtn').onclick=()=>{$('loginScreen').classList.add('show');$('loginName').value='';$('loginEmail').value='';};
